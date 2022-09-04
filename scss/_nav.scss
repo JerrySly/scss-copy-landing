@@ -1,0 +1,83 @@
+@import "variables";
+#navbar {
+  height: 79px;
+  background-color: $nav-background-color;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 0px 15px;
+  .menu-wrapper {
+    margin-left: auto;
+    margin-right: auto; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1050px;
+    
+    .logo {
+      svg {
+        width: 61px;
+        height: 43px;
+      }
+    }
+    button {
+      background-color: $orange-background;
+      color: $nav-background-color;
+      letter-spacing: 0.01em;
+      font-size: 14px;
+      min-width: 128px;
+      border-radius: 5px;
+      padding: 14px 13px;
+      outline: none;
+      border: none;
+      font-weight: 700;
+      margin-right: 20px;
+      align-self: center;
+      cursor: pointer;
+      transition: all .3s ease 0s;
+      &:hover{
+        background-color: $red-background;
+        color: $light-text-color;
+      }
+    }
+    .menu {
+      display: inline-flex;
+      align-items: center;
+      list-style-type: none;
+      margin-left: auto;
+      margin-right: 20px;
+      overflow-wrap: break-word;
+      justify-content: center;
+
+      &-item {
+        font-family: $common-font;
+        padding: 10px 14px;
+        display: inline-block;
+        cursor: pointer;
+        height: 40px;
+        font-size: 13px;
+        border: 1px solid transparent;
+        
+        &:hover{
+            text-decoration: 2px solid underline;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            background-color: $blue-color;
+            color: $nav-background-color;
+            text-underline-offset: 3px;
+        }
+        &:hover > span{
+            color: $nav-background-color;
+        }
+
+        span {
+          color: $light-text-color;
+          font-weight: 700;
+          line-height: 20px;
+          letter-spacing: 0.1px;
+          word-spacing: 0.001px;
+        }
+      }
+    }
+  }
+}
